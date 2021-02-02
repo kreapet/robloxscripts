@@ -112,36 +112,35 @@ local function QOPCC_fake_script() -- ScreenGui.Script
 	--criminal base: -961, 103, 2053
 	
 	--Locals...
-	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	while true do
+		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	end
 	local door = game.Workspace.Doors
 	local guardroom = CFrame.new(855, 102, 2279)
 	local prison = CFrame.new(884, 99, 2391)
 	local yard = CFrame.new(826, 98, 2415)
 	local criminalbase = CFrame.new(-961, 103, 2053)
-	local humanoid = game.Players.LocalPlayer.Character.Humanoid
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-	wait(0.1)
 	
 	
 	--Teleport scripts..
 	tpguard.MouseButton1Click:connect(function()
 		pl.CFrame = guardroom
-		
+		wait(0.1)
 	end)
 	
 	tpcriminal.MouseButton1Click:connect(function()
 		pl.CFrame = criminalbase
-		
+		wait(0.1)
 	end)
 	
 	tpyard.MouseButton1Click:connect(function()
 		pl.CFrame = yard
-		
+		wait(0.1)
 	end)
 	
 	tpprison.MouseButton1Click:connect(function()
 		pl.CFrame = prison
-		
+		wait(0.1)
 	end)
 	
 	--Door Killer Script..
