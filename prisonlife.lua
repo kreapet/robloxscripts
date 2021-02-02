@@ -112,9 +112,7 @@ local function QOPCC_fake_script() -- ScreenGui.Script
 	--criminal base: -961, 103, 2053
 	
 	--Locals...
-	while true do
-		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-	end
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 	local door = game.Workspace.Doors
 	local guardroom = CFrame.new(855, 102, 2279)
 	local prison = CFrame.new(884, 99, 2391)
