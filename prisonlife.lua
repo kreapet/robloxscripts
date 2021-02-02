@@ -118,6 +118,9 @@ local function QOPCC_fake_script() -- ScreenGui.Script
 	local prison = CFrame.new(884, 99, 2391)
 	local yard = CFrame.new(826, 98, 2415)
 	local criminalbase = CFrame.new(-961, 103, 2053)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	wait(0.1)
 	
 	
 	--Teleport scripts..
