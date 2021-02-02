@@ -123,22 +123,22 @@ local function QOPCC_fake_script() -- ScreenGui.Script
 	--Teleport scripts..
 	tpguard.MouseButton1Click:connect(function()
 		pl.CFrame = guardroom
-		wait(0.1)
+		
 	end)
 	
 	tpcriminal.MouseButton1Click:connect(function()
 		pl.CFrame = criminalbase
-		wait(0.1)
+		
 	end)
 	
 	tpyard.MouseButton1Click:connect(function()
 		pl.CFrame = yard
-		wait(0.1)
+		
 	end)
 	
 	tpprison.MouseButton1Click:connect(function()
 		pl.CFrame = prison
-		wait(0.1)
+		
 	end)
 	
 	--Door Killer Script..
