@@ -254,4 +254,3 @@ local function NODRP_fake_script() -- ScreenGui.Script
 
 end
 coroutine.wrap(NODRP_fake_script)()
-wdw
