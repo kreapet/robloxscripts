@@ -1,5 +1,5 @@
--- Krea Prison Life
--- Version: v1.1
+-- Krea Prison Life Gui
+-- Version: v1.2
 
 -- Instances:
 
@@ -19,6 +19,10 @@ local m4a1 = Instance.new("TextButton")
 local riot = Instance.new("TextButton")
 local arrest = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
+local Arrestpp = Instance.new("Frame")
+local pplname = Instance.new("TextBox")
+local TextLabel_2 = Instance.new("TextLabel")
+local arrestppl = Instance.new("TextButton")
 
 --Properties:
 
@@ -186,37 +190,79 @@ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 30.000
 TextLabel.TextStrokeTransparency = 0.000
 
+Arrestpp.Name = "Arrestpp"
+Arrestpp.Parent = ScreenGui
+Arrestpp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Arrestpp.Position = UDim2.new(0.133061752, 0, 0.488332301, 0)
+Arrestpp.Size = UDim2.new(0, 169, 0, 171)
+Arrestpp.Style = Enum.FrameStyle.DropShadow
+
+pplname.Name = "pplname"
+pplname.Parent = Arrestpp
+pplname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pplname.BackgroundTransparency = 0.650
+pplname.Position = UDim2.new(0.041420117, 0, 0.465277761, 0)
+pplname.Size = UDim2.new(0, 139, 0, 50)
+pplname.Font = Enum.Font.SpecialElite
+pplname.Text = ""
+pplname.TextColor3 = Color3.fromRGB(0, 0, 0)
+pplname.TextSize = 14.000
+
+TextLabel_2.Parent = Arrestpp
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(-0.0118343197, 0, -0.0178761631, 0)
+TextLabel_2.Size = UDim2.new(0, 158, 0, 76)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "ARREST PEOPLE"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 30.000
+TextLabel_2.TextStrokeTransparency = 0.000
+TextLabel_2.TextWrapped = true
+
+arrestppl.Name = "arrestppl"
+arrestppl.Parent = Arrestpp
+arrestppl.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+arrestppl.BackgroundTransparency = 0.500
+arrestppl.Position = UDim2.new(0.213017747, 0, 0.801169574, 0)
+arrestppl.Size = UDim2.new(0, 83, 0, 29)
+arrestppl.Font = Enum.Font.SourceSans
+arrestppl.Text = "Arrest"
+arrestppl.TextColor3 = Color3.fromRGB(255, 255, 255)
+arrestppl.TextSize = 20.000
+
 -- Scripts:
 
-local function NODRP_fake_script() -- ScreenGui.Script 
+local function NJVULVB_fake_script() -- ScreenGui.Script 
 	local script = Instance.new('Script', ScreenGui)
 
 	local crimtm = game.Teams.Criminals 
 	local door = game.Workspace.Doors
 	local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-
-	doorer.MouseButton1Down:connect(function()
-		for i,v in pairs(door:GetChildren()) do
-			v:Destroy()		
-		end	
-	end)
-	guard.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(855, 102, 2279) -- enter your own
-	end)
-
-	prison.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(884, 99, 2391) -- enter your own
-	end)
-	yard.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(826, 98, 2415) -- enter your own
-	end)
-	crim.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(-961, 103, 2053) -- enter your own
-	end)
+	
+		doorer.MouseButton1Down:connect(function()
+			for i,v in pairs(door:GetChildren()) do
+				v:Destroy()		
+			end	
+		end)
+		guard.MouseButton1Click:connect(function()
+			local char = game.Players.LocalPlayer.Character -- get character from player
+			char.HumanoidRootPart.CFrame = CFrame.new(855, 102, 2279) -- enter your own
+		end)
+	
+		prison.MouseButton1Click:connect(function()
+			local char = game.Players.LocalPlayer.Character -- get character from player
+			char.HumanoidRootPart.CFrame = CFrame.new(884, 99, 2391) -- enter your own
+		end)
+		yard.MouseButton1Click:connect(function()
+			local char = game.Players.LocalPlayer.Character -- get character from player
+			char.HumanoidRootPart.CFrame = CFrame.new(826, 98, 2415) -- enter your own
+		end)
+		crim.MouseButton1Click:connect(function()
+			local char = game.Players.LocalPlayer.Character -- get character from player
+			char.HumanoidRootPart.CFrame = CFrame.new(-961, 103, 2053) -- enter your own
+		end)
 	m4a1.MouseButton1Click:connect(function()
 		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M4A1"].ITEMPICKUP)
 	end)
@@ -232,7 +278,7 @@ local function NODRP_fake_script() -- ScreenGui.Script
 	riot.MouseButton1Click:connect(function()
 		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Riot Shield"].ITEMPICKUP)
 	end)
-
+	
 	arrest.MouseButton1Click:connect(function()
 		while true do
 			local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -245,12 +291,23 @@ local function NODRP_fake_script() -- ScreenGui.Script
 			end
 		end
 	end)
-
-
-	local frame = script.Parent.Frame
-	frame.Draggable = true
-	frame.Active = true
-	frame.Selectable = true
-
+	
+	
+		frame = script.Parent.Frame
+		frame.Draggable = true
+		frame.Active = true
+		frame.Selectable = true
+	
+		frame2 = script.Parent.Arrestpp
+		frame2.Draggable = true
+		frame2.Active = true
+		frame2.Selectable = true
+	
+	-- Arrest People
+	
+	arrestppl.MouseButton1Click:connect(function()
+		game.Workspace.Remote.arrest:InvokeServer(game.Players[script.Parent.Arrestpp.pplname.Text].Character.HumanoidRootPart)
+	end)
+	
 end
-coroutine.wrap(NODRP_fake_script)()
+coroutine.wrap(NJVULVB_fake_script)()
