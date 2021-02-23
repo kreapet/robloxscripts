@@ -1,5 +1,5 @@
--- Gui to Lua
--- Version: 3.2
+-- KREAPET PRISON LIFE GUI
+-- github.com/kreapet/robloxscripts
 
 -- Instances:
 
@@ -12,6 +12,12 @@ local guard = Instance.new("TextButton")
 local prison = Instance.new("TextButton")
 local yard = Instance.new("TextButton")
 local crim = Instance.new("TextButton")
+local m9 = Instance.new("TextButton")
+local reming = Instance.new("TextButton")
+local ak47 = Instance.new("TextButton")
+local m4a1 = Instance.new("TextButton")
+local riot = Instance.new("TextButton")
+local arrest = Instance.new("TextButton")
 
 --Properties:
 
@@ -20,16 +26,16 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.0283286124, 0, 0.253012061, 0)
-Frame.Size = UDim2.new(0, 104, 0, 130)
+Frame.Position = UDim2.new(0.0283286106, 0, 0.253012061, 0)
+Frame.Size = UDim2.new(0, 104, 0, 263)
 Frame.Style = Enum.FrameStyle.DropShadow
 
 Krea.Name = "Krea"
 Krea.Parent = Frame
 Krea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Krea.BackgroundTransparency = 1.000
-Krea.Position = UDim2.new(0.0576923117, 0, -0.143645778, 0)
-Krea.Size = UDim2.new(0, 77, 0, 48)
+Krea.Position = UDim2.new(0.0768092275, 0, -0.0314037502, 0)
+Krea.Size = UDim2.new(0, 77, 0, 28)
 Krea.Font = Enum.Font.DenkOne
 Krea.Text = "KREA"
 Krea.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -38,7 +44,7 @@ Krea.TextSize = 14.000
 doorer.Name = "doorer"
 doorer.Parent = Frame
 doorer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-doorer.Position = UDim2.new(-0.0384615362, 0, 0.274505854, 0)
+doorer.Position = UDim2.new(-0.0384615362, 0, 0.149566799, 0)
 doorer.Size = UDim2.new(0, 96, 0, 18)
 doorer.Style = Enum.ButtonStyle.RobloxButton
 doorer.Font = Enum.Font.RobotoMono
@@ -50,8 +56,8 @@ PRISONLIFE.Name = "PRISON LIFE"
 PRISONLIFE.Parent = Frame
 PRISONLIFE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PRISONLIFE.BackgroundTransparency = 1.000
-PRISONLIFE.Position = UDim2.new(0.239550367, 0, 0.0244044363, 0)
-PRISONLIFE.Size = UDim2.new(0, 45, 0, 39)
+PRISONLIFE.Position = UDim2.new(0.207015321, 0, 0.0547356531, 0)
+PRISONLIFE.Size = UDim2.new(0, 44, 0, 23)
 PRISONLIFE.Font = Enum.Font.DenkOne
 PRISONLIFE.Text = "PRISON LIFE"
 PRISONLIFE.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -60,7 +66,7 @@ PRISONLIFE.TextSize = 14.000
 guard.Name = "guard"
 guard.Parent = Frame
 guard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-guard.Position = UDim2.new(-0.0384615362, 0, 0.428351998, 0)
+guard.Position = UDim2.new(-0.0288461521, 0, 0.231746793, 0)
 guard.Size = UDim2.new(0, 96, 0, 18)
 guard.Style = Enum.ButtonStyle.RobloxButton
 guard.Font = Enum.Font.RobotoMono
@@ -71,7 +77,7 @@ guard.TextSize = 14.000
 prison.Name = "prison"
 prison.Parent = Frame
 prison.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-prison.Position = UDim2.new(-0.0384615362, 0, 0.566813529, 0)
+prison.Position = UDim2.new(-0.0384615362, 0, 0.303758174, 0)
 prison.Size = UDim2.new(0, 96, 0, 18)
 prison.Style = Enum.ButtonStyle.RobloxButton
 prison.Font = Enum.Font.RobotoMono
@@ -82,7 +88,7 @@ prison.TextSize = 14.000
 yard.Name = "yard"
 yard.Parent = Frame
 yard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-yard.Position = UDim2.new(-0.0384615362, 0, 0.705275059, 0)
+yard.Position = UDim2.new(-0.0384615362, 0, 0.372999072, 0)
 yard.Size = UDim2.new(0, 96, 0, 18)
 yard.Style = Enum.ButtonStyle.RobloxButton
 yard.Font = Enum.Font.RobotoMono
@@ -93,7 +99,7 @@ yard.TextSize = 14.000
 crim.Name = "crim"
 crim.Parent = Frame
 crim.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-crim.Position = UDim2.new(-0.0384615362, 0, 0.843736589, 0)
+crim.Position = UDim2.new(-0.0288461521, 0, 0.446424127, 0)
 crim.Size = UDim2.new(0, 96, 0, 18)
 crim.Style = Enum.ButtonStyle.RobloxButton
 crim.Font = Enum.Font.RobotoMono
@@ -101,122 +107,81 @@ crim.Text = "TP to CrmBase"
 crim.TextColor3 = Color3.fromRGB(255, 255, 255)
 crim.TextSize = 14.000
 
+m9.Name = "m9"
+m9.Parent = Frame
+m9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+m9.Position = UDim2.new(-0.0288461521, 0, 0.521737933, 0)
+m9.Size = UDim2.new(0, 96, 0, 18)
+m9.Style = Enum.ButtonStyle.RobloxButton
+m9.Font = Enum.Font.RobotoMono
+m9.Text = "Give M9"
+m9.TextColor3 = Color3.fromRGB(255, 255, 255)
+m9.TextSize = 14.000
+
+reming.Name = "reming"
+reming.Parent = Frame
+reming.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+reming.Position = UDim2.new(-0.0288461521, 0, 0.59705174, 0)
+reming.Size = UDim2.new(0, 96, 0, 18)
+reming.Style = Enum.ButtonStyle.RobloxButton
+reming.Font = Enum.Font.RobotoMono
+reming.Text = "Give Remington"
+reming.TextColor3 = Color3.fromRGB(255, 255, 255)
+reming.TextSize = 14.000
+
+ak47.Name = "ak47"
+ak47.Parent = Frame
+ak47.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ak47.Position = UDim2.new(-0.0288461521, 0, 0.672365546, 0)
+ak47.Size = UDim2.new(0, 96, 0, 18)
+ak47.Style = Enum.ButtonStyle.RobloxButton
+ak47.Font = Enum.Font.RobotoMono
+ak47.Text = "Give AK-47"
+ak47.TextColor3 = Color3.fromRGB(255, 255, 255)
+ak47.TextSize = 14.000
+
+m4a1.Name = "m4a1"
+m4a1.Parent = Frame
+m4a1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+m4a1.Position = UDim2.new(-0.0384615362, 0, 0.747679353, 0)
+m4a1.Size = UDim2.new(0, 96, 0, 18)
+m4a1.Style = Enum.ButtonStyle.RobloxButton
+m4a1.Font = Enum.Font.RobotoMono
+m4a1.Text = "Give M4A1"
+m4a1.TextColor3 = Color3.fromRGB(255, 255, 255)
+m4a1.TextSize = 14.000
+
+riot.Name = "riot"
+riot.Parent = Frame
+riot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+riot.Position = UDim2.new(-0.0480769202, 0, 0.822993159, 0)
+riot.Size = UDim2.new(0, 96, 0, 18)
+riot.Style = Enum.ButtonStyle.RobloxButton
+riot.Font = Enum.Font.RobotoMono
+riot.Text = "Give RiotShield"
+riot.TextColor3 = Color3.fromRGB(255, 255, 255)
+riot.TextSize = 14.000
+
+arrest.Name = "arrest"
+arrest.Parent = Frame
+arrest.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+arrest.Position = UDim2.new(-0.0384615362, 0, 0.891434193, 0)
+arrest.Size = UDim2.new(0, 96, 0, 18)
+arrest.Style = Enum.ButtonStyle.RobloxButton
+arrest.Font = Enum.Font.RobotoMono
+arrest.Text = "Arrest RNDM"
+arrest.TextColor3 = Color3.fromRGB(255, 255, 255)
+arrest.TextSize = 14.000
+arrest.TextWrapped = true
+
 -- Scripts:
 
-local function QZOZSA_fake_script() -- ScreenGui.Script 
+local function VTDT_fake_script() -- ScreenGui.Script 
 	local script = Instance.new('Script', ScreenGui)
 
-	local doors = game.Workspace.Doors
-	
-	-- Gui to Lua
-	-- Version: 3.2
-	
-	-- Instances:
-	
-	local ScreenGui = Instance.new("ScreenGui")
-	local Frame = Instance.new("Frame")
-	local Krea = Instance.new("TextLabel")
-	local doorer = Instance.new("TextButton")
-	local PRISONLIFE = Instance.new("TextLabel")
-	local guard = Instance.new("TextButton")
-	local prison = Instance.new("TextButton")
-	local yard = Instance.new("TextButton")
-	local crim = Instance.new("TextButton")
-	
-	--Properties:
-	
-	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-	Frame.Parent = ScreenGui
-	Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Frame.Position = UDim2.new(0.0283286124, 0, 0.253012061, 0)
-	Frame.Size = UDim2.new(0, 104, 0, 130)
-	Frame.Style = Enum.FrameStyle.DropShadow
-	
-	Krea.Name = "Krea"
-	Krea.Parent = Frame
-	Krea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Krea.BackgroundTransparency = 1.000
-	Krea.Position = UDim2.new(0.0576923117, 0, -0.143645778, 0)
-	Krea.Size = UDim2.new(0, 77, 0, 48)
-	Krea.Font = Enum.Font.DenkOne
-	Krea.Text = "KREA"
-	Krea.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Krea.TextSize = 14.000
-	
-	doorer.Name = "doorer"
-	doorer.Parent = Frame
-	doorer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	doorer.Position = UDim2.new(-0.0384615362, 0, 0.274505854, 0)
-	doorer.Size = UDim2.new(0, 96, 0, 18)
-	doorer.Style = Enum.ButtonStyle.RobloxButton
-	doorer.Font = Enum.Font.RobotoMono
-	doorer.Text = "Delete Doors"
-	doorer.TextColor3 = Color3.fromRGB(255, 255, 255)
-	doorer.TextSize = 14.000
-	
-	PRISONLIFE.Name = "PRISON LIFE"
-	PRISONLIFE.Parent = Frame
-	PRISONLIFE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	PRISONLIFE.BackgroundTransparency = 1.000
-	PRISONLIFE.Position = UDim2.new(0.239550367, 0, 0.0244044363, 0)
-	PRISONLIFE.Size = UDim2.new(0, 45, 0, 39)
-	PRISONLIFE.Font = Enum.Font.DenkOne
-	PRISONLIFE.Text = "PRISON LIFE"
-	PRISONLIFE.TextColor3 = Color3.fromRGB(255, 255, 255)
-	PRISONLIFE.TextSize = 14.000
-	
-	guard.Name = "guard"
-	guard.Parent = Frame
-	guard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	guard.Position = UDim2.new(-0.0384615362, 0, 0.428351998, 0)
-	guard.Size = UDim2.new(0, 96, 0, 18)
-	guard.Style = Enum.ButtonStyle.RobloxButton
-	guard.Font = Enum.Font.RobotoMono
-	guard.Text = "TP to Guard"
-	guard.TextColor3 = Color3.fromRGB(255, 255, 255)
-	guard.TextSize = 14.000
-	
-	prison.Name = "prison"
-	prison.Parent = Frame
-	prison.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	prison.Position = UDim2.new(-0.0384615362, 0, 0.566813529, 0)
-	prison.Size = UDim2.new(0, 96, 0, 18)
-	prison.Style = Enum.ButtonStyle.RobloxButton
-	prison.Font = Enum.Font.RobotoMono
-	prison.Text = "TP to Prison"
-	prison.TextColor3 = Color3.fromRGB(255, 255, 255)
-	prison.TextSize = 14.000
-	
-	yard.Name = "yard"
-	yard.Parent = Frame
-	yard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	yard.Position = UDim2.new(-0.0384615362, 0, 0.705275059, 0)
-	yard.Size = UDim2.new(0, 96, 0, 18)
-	yard.Style = Enum.ButtonStyle.RobloxButton
-	yard.Font = Enum.Font.RobotoMono
-	yard.Text = "TP to Yard"
-	yard.TextColor3 = Color3.fromRGB(255, 255, 255)
-	yard.TextSize = 14.000
-	
-	crim.Name = "crim"
-	crim.Parent = Frame
-	crim.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	crim.Position = UDim2.new(-0.0384615362, 0, 0.843736589, 0)
-	crim.Size = UDim2.new(0, 96, 0, 18)
-	crim.Style = Enum.ButtonStyle.RobloxButton
-	crim.Font = Enum.Font.RobotoMono
-	crim.Text = "TP to CrmBase"
-	crim.TextColor3 = Color3.fromRGB(255, 255, 255)
-	crim.TextSize = 14.000
-	
-	-- Scripts:
-	
-	local function RLHMKK_fake_script() -- ScreenGui.Script 
-		local script = Instance.new('Script', ScreenGui)
-	
-		local door = game.Workspace.Doors
+	local crimtm = game.Teams.Criminals 
+	local door = game.Workspace.Doors
+	local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 	
 		doorer.MouseButton1Down:connect(function()
 			for i,v in pairs(door:GetChildren()) do
@@ -240,35 +205,35 @@ local function QZOZSA_fake_script() -- ScreenGui.Script
 			local char = game.Players.LocalPlayer.Character -- get character from player
 			char.HumanoidRootPart.CFrame = CFrame.new(-961, 103, 2053) -- enter your own
 		end)
+	m4a1.MouseButton1Click:connect(function()
+		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M4A1"].ITEMPICKUP)
+	end)
+	m9.MouseButton1Click:connect(function()
+		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
+	end)
+	reming.MouseButton1Click:connect(function()
+		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
+	end)
+	ak47.MouseButton1Click:connect(function()
+		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
+	end)
+	riot.MouseButton1Click:connect(function()
+		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Riot Shield"].ITEMPICKUP)
+	end)
+	
+	arrest.MouseButton1Click:connect(function()
+		local rndmplr = crimtm:GetPlayers()[math.random(1, #crimtm:GetPlayers())]
+		plr.CFrame = rndmplr.Character.HumanoidRootPart.CFrame
+		game.Workspace.Remote.arrest:InvokeServer(rndmplr.Character.HumanoidRootPart)
+		wait(1)
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end)
+	
 	
 		frame = script.Parent.Frame
 		frame.Draggable = true
 		frame.Active = true
 		frame.Selectable = true
-	end
-	coroutine.wrap(RLHMKK_fake_script)()
 	
-	guard.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(855, 102, 2279) -- enter your own
-	end)
-	
-	prison.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(884, 99, 2391) -- enter your own
-	end)
-	yard.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(826, 98, 2415) -- enter your own
-	end)
-	crim.MouseButton1Click:connect(function()
-		local char = game.Players.LocalPlayer.Character -- get character from player
-		char.HumanoidRootPart.CFrame = CFrame.new(-961, 103, 2053) -- enter your own
-	end)
-	
-	frame = script.Parent.Frame
-	frame.Draggable = true
-	frame.Active = true
-	frame.Selectable = true
 end
-coroutine.wrap(QZOZSA_fake_script)()
+coroutine.wrap(VTDT_fake_script)()
