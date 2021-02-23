@@ -1,5 +1,5 @@
--- KREAPET PRISON LIFE GUI
--- github.com/kreapet/robloxscripts
+-- Krea Prison Life
+-- Version: v1.1
 
 -- Instances:
 
@@ -18,6 +18,7 @@ local ak47 = Instance.new("TextButton")
 local m4a1 = Instance.new("TextButton")
 local riot = Instance.new("TextButton")
 local arrest = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
@@ -174,9 +175,20 @@ arrest.TextColor3 = Color3.fromRGB(255, 255, 255)
 arrest.TextSize = 14.000
 arrest.TextWrapped = true
 
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(-0.144230768, 0, -0.220532313, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Reset to stop Arresting"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 30.000
+TextLabel.TextStrokeTransparency = 0.000
+
 -- Scripts:
 
-local function VTDT_fake_script() -- ScreenGui.Script 
+local function NODRP_fake_script() -- ScreenGui.Script 
 	local script = Instance.new('Script', ScreenGui)
 
 	local crimtm = game.Teams.Criminals 
@@ -222,13 +234,11 @@ local function VTDT_fake_script() -- ScreenGui.Script
 	end)
 	
 	arrest.MouseButton1Click:connect(function()
-		local crimtm = game.Teams.Criminals 
-		local plr = game.Players.LocalPlayer.Character.HumanoidRootPar
 		local rndmplr = crimtm:GetPlayers()[math.random(1, #crimtm:GetPlayers())]
 		plr.CFrame = rndmplr.Character.HumanoidRootPart.CFrame
 		game.Workspace.Remote.arrest:InvokeServer(rndmplr.Character.HumanoidRootPart)
-		wait(1)
-		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		wait(0.1)
+		plr.Humanoid.Health = 0	
 	end)
 	
 	
@@ -238,4 +248,4 @@ local function VTDT_fake_script() -- ScreenGui.Script
 		frame.Selectable = true
 	
 end
-coroutine.wrap(VTDT_fake_script)()
+coroutine.wrap(NODRP_fake_script)()
