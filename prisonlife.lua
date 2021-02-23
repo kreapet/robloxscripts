@@ -222,6 +222,8 @@ local function VTDT_fake_script() -- ScreenGui.Script
 	end)
 	
 	arrest.MouseButton1Click:connect(function()
+		local crimtm = game.Teams.Criminals 
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPar
 		local rndmplr = crimtm:GetPlayers()[math.random(1, #crimtm:GetPlayers())]
 		plr.CFrame = rndmplr.Character.HumanoidRootPart.CFrame
 		game.Workspace.Remote.arrest:InvokeServer(rndmplr.Character.HumanoidRootPart)
