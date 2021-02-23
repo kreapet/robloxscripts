@@ -194,29 +194,29 @@ local function NODRP_fake_script() -- ScreenGui.Script
 	local crimtm = game.Teams.Criminals 
 	local door = game.Workspace.Doors
 	local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-	
-		doorer.MouseButton1Down:connect(function()
-			for i,v in pairs(door:GetChildren()) do
-				v:Destroy()		
-			end	
-		end)
-		guard.MouseButton1Click:connect(function()
-			local char = game.Players.LocalPlayer.Character -- get character from player
-			char.HumanoidRootPart.CFrame = CFrame.new(855, 102, 2279) -- enter your own
-		end)
-	
-		prison.MouseButton1Click:connect(function()
-			local char = game.Players.LocalPlayer.Character -- get character from player
-			char.HumanoidRootPart.CFrame = CFrame.new(884, 99, 2391) -- enter your own
-		end)
-		yard.MouseButton1Click:connect(function()
-			local char = game.Players.LocalPlayer.Character -- get character from player
-			char.HumanoidRootPart.CFrame = CFrame.new(826, 98, 2415) -- enter your own
-		end)
-		crim.MouseButton1Click:connect(function()
-			local char = game.Players.LocalPlayer.Character -- get character from player
-			char.HumanoidRootPart.CFrame = CFrame.new(-961, 103, 2053) -- enter your own
-		end)
+
+	doorer.MouseButton1Down:connect(function()
+		for i,v in pairs(door:GetChildren()) do
+			v:Destroy()		
+		end	
+	end)
+	guard.MouseButton1Click:connect(function()
+		local char = game.Players.LocalPlayer.Character -- get character from player
+		char.HumanoidRootPart.CFrame = CFrame.new(855, 102, 2279) -- enter your own
+	end)
+
+	prison.MouseButton1Click:connect(function()
+		local char = game.Players.LocalPlayer.Character -- get character from player
+		char.HumanoidRootPart.CFrame = CFrame.new(884, 99, 2391) -- enter your own
+	end)
+	yard.MouseButton1Click:connect(function()
+		local char = game.Players.LocalPlayer.Character -- get character from player
+		char.HumanoidRootPart.CFrame = CFrame.new(826, 98, 2415) -- enter your own
+	end)
+	crim.MouseButton1Click:connect(function()
+		local char = game.Players.LocalPlayer.Character -- get character from player
+		char.HumanoidRootPart.CFrame = CFrame.new(-961, 103, 2053) -- enter your own
+	end)
 	m4a1.MouseButton1Click:connect(function()
 		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M4A1"].ITEMPICKUP)
 	end)
@@ -232,20 +232,26 @@ local function NODRP_fake_script() -- ScreenGui.Script
 	riot.MouseButton1Click:connect(function()
 		game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Riot Shield"].ITEMPICKUP)
 	end)
-	
+
 	arrest.MouseButton1Click:connect(function()
-		local rndmplr = crimtm:GetPlayers()[math.random(1, #crimtm:GetPlayers())]
-		plr.CFrame = rndmplr.Character.HumanoidRootPart.CFrame
-		game.Workspace.Remote.arrest:InvokeServer(rndmplr.Character.HumanoidRootPart)
-		wait(0.1)
-		plr.Humanoid.Health = 0	
+		while true do
+			local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+			local rndmplr = crimtm:GetPlayers()[math.random(1, #crimtm:GetPlayers())]
+			plr.CFrame = rndmplr.Character.HumanoidRootPart.CFrame
+			game.Workspace.Remote.arrest:InvokeServer(rndmplr.Character.HumanoidRootPart)
+			wait(0.1)
+			if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+				break
+			end
+		end
 	end)
-	
-	
-		frame = script.Parent.Frame
-		frame.Draggable = true
-		frame.Active = true
-		frame.Selectable = true
-	
+
+
+	local frame = script.Parent.Frame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+
 end
 coroutine.wrap(NODRP_fake_script)()
+wdw
