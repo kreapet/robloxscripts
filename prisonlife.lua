@@ -308,6 +308,7 @@ local function NJVULVB_fake_script() -- ScreenGui.Script
 	arrestppl.MouseButton1Click:connect(function()
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[script.Parent.Arrestpp.pplname.Text].Character.HumanoidRootPart.CFrame
 		game.Workspace.Remote.arrest:InvokeServer(game.Players[script.Parent.Arrestpp.pplname.Text].Character.HumanoidRootPart)
+			game.Workspace.Remote.arrest:InvokeServer(game.Players[script.Parent.Arrestpp.pplname.Text].Character.HumanoidRootPart)
 	end)
 	
 end
