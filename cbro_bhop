@@ -1,0 +1,31 @@
+local plrs = game:GetService("Players")
+	local plr = plrs.LocalPlayer
+	local UserInputService = game:GetService("UserInputService")
+	local space = UserInputService:IsKeyDown(Enum.KeyCode.Space)
+	local Client = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
+	local backup = {}
+	backup.speed = Client.speedupdate
+	local j = 0
+
+while wait() do
+space = UserInputService:IsKeyDown(Enum.KeyCode.Space)
+	if space==true then
+	if workspace:FindFirstChild(plr.Name) then
+	if plr.Character:FindFirstChild("Humanoid") then
+	j = 1
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 22
+	Client.speedupdate = function()
+	end
+	end
+	end
+	else
+	if j == 1 then
+	j = 0
+	wait(0.5)
+	Client.speedupdate = backup.speed
+	wait()
+	end
+	end
+	end
