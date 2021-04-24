@@ -1,0 +1,4 @@
+while wait() do
+local client = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
+client.crouchcooldown = 0
+end
